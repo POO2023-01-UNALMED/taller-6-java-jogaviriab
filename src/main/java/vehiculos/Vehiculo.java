@@ -44,26 +44,24 @@ public class Vehiculo {
 	String getPlaca() {return this.placa;}
 	int getPuertas() {return this.puertas;}
 	int getVelocidadMaxima() {return this.velocidadMaxima;}
-	String getnombre() {return this.nombre;}
+	String getNombre() {return this.nombre;}
 	int getPrecio() {return this.precio;}
 	int getPeso() {return this.peso;}
 	String getTraccion() {return this.traccion;}
 	Fabricante getFabricante() {return this.fabricante;}
 	
-	
+	void setPlaca(String placa ) {this.placa = placa;}
+	void setPuertas( int puertas) {this.puertas = puertas;}
+	void setVelocidadMaxima( int velocidad) {this.velocidadMaxima= velocidad;}
+	void setNombre( String nombre) {this.nombre= nombre;}
+	void setprecio( int precio) {this.precio =precio ;}
+	void setPeso( int peso) {this.peso = peso;}
+	void setTraccion( String traccion) {this.traccion =traccion ;}
+	void setFrabicante( Fabricante fabricante) {this.fabricante = fabricante;}
 	
 	public String toString(){
 		return "Placa:"+this.placa+"\nPuertas:"+this.puertas+"\nVelocidad Maxima:"+this.velocidadMaxima+"\nNombre:"+this.nombre+"\nPrecio"+this.precio+"\nPeso:"+
 	this.peso+"\nTraccion:"+this.traccion+"\nFabricante:"+this.fabricante;
 	}
-	public static void main(String[]args) {
-		Pais puerto = new Pais("Puerto Rico");
-		Fabricante jovani = new Fabricante("jovani Vazques",puerto);
-		Automovil auto1= new Automovil("444GGG","Montate en mi motora",10,100,jovani,4);
-		
-		System.out.print(auto1);
-		
-		System.out.print(vehiculosPorTipo());
-		
-	}
+
 }
