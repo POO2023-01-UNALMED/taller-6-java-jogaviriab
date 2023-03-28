@@ -13,7 +13,7 @@ public class Vehiculo {
 	public int peso;
 	public String traccion;
 	public Fabricante fabricante;
-	public int cantidadVehiculo;
+	public static int cantidadVehiculo;
 	public static int cantAuto = 0;
 	public static int cantCamion = 0;
 	public static int cantCamioneta = 0;
@@ -28,7 +28,7 @@ public class Vehiculo {
 		this.peso = peso;
 		this.traccion = traccion;
 		this.fabricante = fabricante;
-		this.cantidadVehiculo +=1;
+		cantidadVehiculo +=1;
 		
 		switch(traccion) {
 		case "4X4":
@@ -56,6 +56,7 @@ public class Vehiculo {
 	public String getTraccion() {return this.traccion;}
 	public Fabricante getFabricante() {return this.fabricante;}
 	public static List<Vehiculo> getListVe() {return listVe;}
+	public int getCantidadVehiculo() {return cantidadVehiculo;}
 	
 	
 	public void setPlaca(String placa ) {this.placa = placa;}
@@ -79,7 +80,7 @@ public class Vehiculo {
 		Fabricante ferrari = new Fabricante("ferrari",colombia);
 		Fabricante renault = new Fabricante("Renault",colombia);
 		Fabricante redBull = new Fabricante("Redbull",colombia);
-		Automovil auto1= new Automovil("444GGG","Montate ",10,100,jovani,4);
+		Automovil auto1= new Automovil("444GGG","Montate ",10,100,ferrari,4);
 		Automovil auto2= new Automovil("444G","Montate en ",10,100,ferrari,4);
 		Automovil auto3= new Automovil("44GG","Montate en mi ",10,100,renault,4);
 		Automovil auto4= new Automovil("4G","Montate en mi motora",10,100,redBull,4);
@@ -90,7 +91,7 @@ public class Vehiculo {
 //		System.out.print(auto1.getPlaca());
 		System.out.print(Pais.paisMasVendedor().getNombre());
 //		System.out.print(listVe);
-		
+		System.out.print(Fabricante.fabricaMasVentas().getNombre());
 		
 	}
 }

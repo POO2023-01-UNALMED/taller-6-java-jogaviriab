@@ -10,9 +10,9 @@ public class Pais {
 		paises.add(this);
 	}
 	
-	void setNombre(String nombre) {this.nombre = nombre;}
+	public void setNombre(String nombre) {this.nombre = nombre;}
 	
-	String getNombre(){return this.nombre;}
+	public String getNombre(){return this.nombre;}
 	
 	public static Pais paisMasVendedor() {
 		int mayor=0;
