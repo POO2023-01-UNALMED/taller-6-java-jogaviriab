@@ -13,7 +13,7 @@ public class Vehiculo {
 	public int peso;
 	public String traccion;
 	public Fabricante fabricante;
-	public static int cantidadVehiculo;
+	public static int cantidadVehiculo=0;
 	public static int cantAuto = 0;
 	public static int cantCamion = 0;
 	public static int cantCamioneta = 0;
@@ -67,31 +67,10 @@ public class Vehiculo {
 	public void setPeso( int peso) {this.peso = peso;}
 	public void setTraccion( String traccion) {this.traccion =traccion ;}
 	public void setFrabicante( Fabricante fabricante) {this.fabricante = fabricante;}
-	
+	public void setCantidadVehiculo( int cantidadVehiculo) {Vehiculo.cantidadVehiculo= cantidadVehiculo;}
 	public String toString(){
 		return /*"Placa:"+this.placa+"\nPuertas:"+this.puertas+"\nVelocidad Maxima:"+this.velocidadMaxima+"\nNombre:"+this.nombre+"\nPrecio"+this.precio+"\nPeso:"+
 	this.peso+"\nTraccion:"+this.traccion+*/"\nFabricante:"+this.fabricante.getPais();
 	}
 
-	public static void main(String[]args) {
-		Pais puerto = new Pais("Puerto Rico");
-		Pais colombia = new Pais("Colombia");
-		Fabricante jovani = new Fabricante("jovani Vazques",puerto);
-		Fabricante ferrari = new Fabricante("ferrari",colombia);
-		Fabricante renault = new Fabricante("Renault",colombia);
-		Fabricante redBull = new Fabricante("Redbull",colombia);
-		Automovil auto1= new Automovil("444GGG","Montate ",10,100,ferrari,4);
-		Automovil auto2= new Automovil("444G","Montate en ",10,100,ferrari,4);
-		Automovil auto3= new Automovil("44GG","Montate en mi ",10,100,renault,4);
-		Automovil auto4= new Automovil("4G","Montate en mi motora",10,100,redBull,4);
-		
-//		System.out.print(auto1);
-		
-//		System.out.print(vehiculosPorTipo());
-//		System.out.print(auto1.getPlaca());
-		System.out.print(Pais.paisMasVendedor().getNombre());
-//		System.out.print(listVe);
-		System.out.print(Fabricante.fabricaMasVentas().getNombre());
-		
-	}
 }
