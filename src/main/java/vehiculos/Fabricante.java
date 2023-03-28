@@ -21,7 +21,7 @@ public class Fabricante {
 	public String getNombre(){return this.nombre;}
 	public Pais getPais() {return this.pais;}
 	
-	public static Fabricante fabricaMasVentas() {
+	public static Fabricante fabricaMayorVentas() {
 		int mayor=0;
 		int indice=0;
 		List<Vehiculo> listVe = Vehiculo.getListVe();
