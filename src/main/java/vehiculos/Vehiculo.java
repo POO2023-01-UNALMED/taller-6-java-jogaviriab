@@ -13,7 +13,7 @@ public class Vehiculo {
 	public int peso;
 	public String traccion;
 	public Fabricante fabricante;
-	public static int cantidadVehiculo=0;
+	public static int cantidadVehiculos=0;
 	public static int cantAuto = 0;
 	public static int cantCamion = 0;
 	public static int cantCamioneta = 0;
@@ -28,7 +28,7 @@ public class Vehiculo {
 		this.peso = peso;
 		this.traccion = traccion;
 		this.fabricante = fabricante;
-		cantidadVehiculo +=1;
+		cantidadVehiculos +=1;
 		
 		switch(traccion) {
 		case "4X4":
@@ -56,7 +56,7 @@ public class Vehiculo {
 	public String getTraccion() {return this.traccion;}
 	public Fabricante getFabricante() {return this.fabricante;}
 	public static List<Vehiculo> getListVe() {return listVe;}
-	public int getCantidadVehiculo() {return cantidadVehiculo;}
+	public int getCantidadVehiculos() {return cantidadVehiculos;}
 	
 	
 	public void setPlaca(String placa ) {this.placa = placa;}
@@ -67,7 +67,7 @@ public class Vehiculo {
 	public void setPeso( int peso) {this.peso = peso;}
 	public void setTraccion( String traccion) {this.traccion =traccion ;}
 	public void setFrabicante( Fabricante fabricante) {this.fabricante = fabricante;}
-	public void setCantidadVehiculo( int cantidadVehiculo) {Vehiculo.cantidadVehiculo= cantidadVehiculo;}
+	public void setCantidadVehiculos( int cantidadVehiculos) {Vehiculo.cantidadVehiculos= cantidadVehiculos;}
 	public String toString(){
 		return /*"Placa:"+this.placa+"\nPuertas:"+this.puertas+"\nVelocidad Maxima:"+this.velocidadMaxima+"\nNombre:"+this.nombre+"\nPrecio"+this.precio+"\nPeso:"+
 	this.peso+"\nTraccion:"+this.traccion+*/"\nFabricante:"+this.fabricante.getPais();
