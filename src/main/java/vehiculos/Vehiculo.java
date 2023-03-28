@@ -56,7 +56,7 @@ public class Vehiculo {
 	public String getTraccion() {return this.traccion;}
 	public Fabricante getFabricante() {return this.fabricante;}
 	public static List<Vehiculo> getListVe() {return listVe;}
-	public int getCantidadVehiculos() {return cantidadVehiculos;}
+	public static int getCantidadVehiculos() {return cantidadVehiculos;}
 	
 	
 	public void setPlaca(String placa ) {this.placa = placa;}
@@ -67,7 +67,7 @@ public class Vehiculo {
 	public void setPeso( int peso) {this.peso = peso;}
 	public void setTraccion( String traccion) {this.traccion =traccion ;}
 	public void setFrabicante( Fabricante fabricante) {this.fabricante = fabricante;}
-	public void setCantidadVehiculos( int cantidadVehiculos) {Vehiculo.cantidadVehiculos= cantidadVehiculos;}
+	public static void setCantidadVehiculos( int cantidadVehiculos) {Vehiculo.cantidadVehiculos= cantidadVehiculos;}
 	public String toString(){
 		return /*"Placa:"+this.placa+"\nPuertas:"+this.puertas+"\nVelocidad Maxima:"+this.velocidadMaxima+"\nNombre:"+this.nombre+"\nPrecio"+this.precio+"\nPeso:"+
 	this.peso+"\nTraccion:"+this.traccion+*/"\nFabricante:"+this.fabricante.getPais();
